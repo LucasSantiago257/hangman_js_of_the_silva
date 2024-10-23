@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Forca</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    #word {
+      font-size: 2em;
+      letter-spacing: 10px;
+    }
+    .letter {
+      display: inline-block;
+      width: 20px;
+      border-bottom: 2px solid black;
+    }
+    #wrong-letters {
+      margin-top: 20px;
+    }
+    canvas {
+      border: 1px solid black;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Jogo da Forca</h1>
+  <p id="word"></p>
+  <p>Erros: <span id="wrong-letters"></span></p>
+  <p>Tentativas restantes: <span id="lives">6</span></p>
+  <input type="text" id="guess" maxlength="1" placeholder="Digite uma letra">
+  <button onclick="guessLetter()">Chutar letra</button>
+  <br>
+  <input type="text" id="guess-word" placeholder="Adivinhe a palavra">
+  <button onclick="guessWholeWord()">Adivinhar a palavra</button>
+  <br>
+  <button onclick="resetGame()">Recomeçar Jogo</button>
+
+  <canvas id="hangman" width="200" height="300"></canvas>
+
+  <script src="app.js"></script>
+</body>
+</html>
